@@ -2,9 +2,6 @@ package creations.maa.devraj.ezdocscanner.ui.screens.home.components
 
 import android.app.Activity
 import android.content.Intent
-import android.provider.Contacts
-import android.provider.ContactsContract
-import android.provider.Telephony.Mms.Intents
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -32,8 +29,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import creations.maa.devraj.ezdocscanner.R
 import creations.maa.devraj.ezdocscanner.data.models.PdfEntity
-import creations.maa.devraj.ezdocscanner.util.getFileUri
 import creations.maa.devraj.ezdocscanner.ui.viewModel.DocViewModel
+import creations.maa.devraj.ezdocscanner.util.getFileUri
 import java.text.SimpleDateFormat
 import java.util.Locale
 
