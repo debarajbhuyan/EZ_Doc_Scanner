@@ -102,11 +102,11 @@ fun RenameDeleteDialog(docViewModel: DocViewModel) {
                                 contentDescription = "delete",
                             )
                         }
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(4.dp))
                         Button(onClick = {
                             docViewModel.showRenameDialog = false
                         }) { Text(stringResource(id = R.string.cancel)) }
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(4.dp))
                         Button(onClick = {
                             docViewModel.currentPdfEntity?.let {pdf->
                                 if (!pdf.name.equals(newNameText,true)) {
