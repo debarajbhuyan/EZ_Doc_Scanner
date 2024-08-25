@@ -25,6 +25,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -62,7 +63,8 @@ fun PdfLayout(pdfEntity: PdfEntity, docViewModel: DocViewModel) {
                 modifier = Modifier.size(40.dp),
                 painter = painterResource(id = R.drawable.ic_pdf),
                 contentDescription = "pdf icon",
-                tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                tint = Color(0xFFCE1717)
+            )
             Spacer(modifier = Modifier.width(16.dp))
             Column(
                 modifier = Modifier.weight(1f)

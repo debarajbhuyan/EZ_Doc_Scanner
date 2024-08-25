@@ -2,9 +2,11 @@ package creations.maa.devraj.ezdocscanner.ui.screens.home.components
 
 import android.content.ClipData
 import android.content.Intent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -68,7 +70,10 @@ fun RenameDeleteDialog(docViewModel: DocViewModel) {
                         label = { Text(stringResource(id = R.string.pdf_name)) }
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    Row {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceAround
+                    ) {
                         IconButton(onClick = {
                             docViewModel.currentPdfEntity?.let {
                                 docViewModel.showRenameDialog = false
@@ -84,9 +89,11 @@ fun RenameDeleteDialog(docViewModel: DocViewModel) {
                             Icon(
                                 painterResource(id = R.drawable.ic_share),
                                 contentDescription = "delete",
-                                tint = Color.Gray
+                                tint = Color.Gray,
+                                modifier = Modifier.padding(0.dp)
                             )
                         }
+                        Spacer(modifier = Modifier.width(4.dp))
                         IconButton(onClick = {
                             docViewModel.currentPdfEntity?.let {
                                 docViewModel.showRenameDialog = false
@@ -100,12 +107,19 @@ fun RenameDeleteDialog(docViewModel: DocViewModel) {
                             Icon(
                                 painterResource(id = R.drawable.ic_delete),
                                 contentDescription = "delete",
+                                modifier = Modifier.padding(0.dp)
                             )
                         }
                         Spacer(modifier = Modifier.width(4.dp))
                         Button(onClick = {
                             docViewModel.showRenameDialog = false
-                        }) { Text(stringResource(id = R.string.cancel)) }
+                        },
+                            modifier = Modifier.weight(1f, fill = false)
+                        ) {
+                            Text(
+                                stringResource(id = R.string.cancel)
+                                )
+                        }
                         Spacer(modifier = Modifier.width(4.dp))
                         Button(onClick = {
                             docViewModel.currentPdfEntity?.let {pdf->
@@ -120,7 +134,13 @@ fun RenameDeleteDialog(docViewModel: DocViewModel) {
                                     docViewModel.showRenameDialog = false
                                 }
                             }
-                        }) { Text(stringResource(id = R.string.update)) }
+                        },
+                            modifier = Modifier.weight(1f, fill = false)
+                        ) {
+                            Text(
+                                stringResource(id = R.string.update)
+                                )
+                        }
                     }
                 }
             }
