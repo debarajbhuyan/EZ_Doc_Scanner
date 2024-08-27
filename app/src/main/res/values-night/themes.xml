@@ -6,7 +6,7 @@
     <style name="MySplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenAnimatedIcon">@drawable/doc_splash</item>
         <item name="windowSplashScreenBackground">@color/black</item>
-        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
         <item name="postSplashScreenTheme">@style/Theme.EZDocScanner</item>
     </style>
 </resources>

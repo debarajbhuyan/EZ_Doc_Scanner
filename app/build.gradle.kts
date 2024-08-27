@@ -12,8 +12,8 @@ android {
         applicationId = "creations.maa.devraj.ezdocscanner"
         minSdk = 24
         targetSdk = 34
-        versionCode = 6
-        versionName = "1.1"
+        versionCode = 14
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -64,6 +64,8 @@ dependencies {
     // Doc Scanner ML Kit
     implementation(libs.play.services.mlkit.document.scanner)
 
+    implementation(libs.androidx.constraintlayout.compose)
+    // Constraint Layout
 
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
